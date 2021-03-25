@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+    <button type="primary" plain="true" ontap="getFile">选择图片</button>
+    <block wx:for="{{list}}" wx:key="src">
+     <image style="width:400rpx;height:400rpx;margin-top:30rpx;" src="{{item.src}}"></image>
+     <view>图片大小:{{item.size}}</view>
+    </block>
+</view>
+<canvas  canvas-id="canvas" style="width:{{cWidth}}px;height:{{cHeight}}px;position: absolute;left:-9999px;top:-9999px;"></canvas>
